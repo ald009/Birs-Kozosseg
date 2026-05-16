@@ -1,0 +1,7 @@
+navbar, header
+- home,jelentkezes, galeria, rolunk reszletesen, kontakt
+
+
+https://tudatosvasarlo.hu/zoldsegkozosseg-belvarosban/
+https://tudatosvasarlo.hu/klimavaltozas-aszaly-vadkar-kozossegi-gazdasag/
+https://tudatosvasarlo.hu/birs-kozosseg/

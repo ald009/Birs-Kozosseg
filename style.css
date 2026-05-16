@@ -1,3 +1,61 @@
+:root {
+    --soil: #1e120a;
+    --bark: #3f2510;
+    --clay: #7a5535;
+    --straw: #c9964a;
+    --cream: #f7f0e6;
+    --sage: #6b9472;
+    --meadow: #3d6e4e;
+    --mist: #dde8e0;
+    --dusk: #c4b49e;
+    --white: #fdfaf6;
+}
+
 body{
-    background-color: antiquewhite;
+    background-color: var(--sage);
+    margin: 0px;
+}
+
+header{
+    position: relative;
+    background: rgba(247, 240, 230, 0.93);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--dusk);
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header-bal {
+    z-index: 1;
+}
+
+header .nav {
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 70px;
+}
+
+header .header-bal:any-link{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    font-size: 30px;
+    color: var(--meadow);
+    margin: 0px;
+    text-decoration: none;
 }
