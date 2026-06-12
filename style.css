@@ -79,3 +79,85 @@ header .header-bal:any-link{
 header .header-bal:any-link:hover{
     color: var(--clay);
 }
+
+header .nav-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+header .nav-toggle img {
+    display: block;
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (max-width: 900px) {
+    header {
+        padding: 20px;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    header .header-bal:any-link {
+        font-size: 24px;
+        padding-left: 0;
+        gap: 20px;
+        margin-top: 18px;
+        order: 1;
+        
+    }
+
+    header img {
+        position: static;
+        transform: none;
+        height: 50px;
+        margin: 0 auto;
+        order: 3;
+    }
+
+    header .nav-toggle {
+        display: flex;
+        order: 2;
+        margin-left: auto;
+    }
+
+    header .nav {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+        margin: 0;
+        padding: 10px 0 0;
+        order: 4;
+        border-top: 1px solid var(--dusk);
+    }
+
+    header .nav.open {
+        display: flex;
+    }
+
+    header .nav li a {
+        display: block;
+        width: 100%;
+        padding: 10px 12px;
+    }
+}
+

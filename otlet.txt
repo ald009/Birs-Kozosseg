@@ -5,3 +5,13 @@ navbar, header
 https://tudatosvasarlo.hu/zoldsegkozosseg-belvarosban/
 https://tudatosvasarlo.hu/klimavaltozas-aszaly-vadkar-kozossegi-gazdasag/
 https://tudatosvasarlo.hu/birs-kozosseg/
+
+home: 
+
+jelentkezes: átadópontok, + mapson, idokozok, telefonszam, folyamat, varolista, szezonkezdes, letszam, rendszer magyarazat
+
+galeria: részlegre bontva
+
+rolunk: leiras, kepek, <a>
+
+kontakt: csak telefonon,telszam, idokozok
