@@ -5,13 +5,16 @@ navbar, header
 https://tudatosvasarlo.hu/zoldsegkozosseg-belvarosban/
 https://tudatosvasarlo.hu/klimavaltozas-aszaly-vadkar-kozossegi-gazdasag/
 https://tudatosvasarlo.hu/birs-kozosseg/
+https://nepszava.hu/3188254_bar-y-lmaz-nem-tudott-buszke-lenni-a-szarmazasara-magyarorszagon-talalt-uj-hazara
+https://tudatosvasarlo.hu/olyan-mintha-lenne-egy-sajat-kertem-csak-nem-nekem-kell-kapalni/?fbclid=IwY2xjawSYt2RleHRuA2FlbQIxMABicmlkETFVOEJHa2tIemg1Y0dIaGxTc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHiNqjBaW6PppQfS4XPS8uKcQJh8lK7xiEr-RmmuRo0vtgw_fMQdJF7Xfzjad_aem_i2lK4SXGwH7oVSpvZrkFCA
+https://www.youtube.com/watch?v=_7YjQ7kDIO8
 
-home: 
+home: kozossegi gazdalkodas (url-ek is),bio,  itt olcso, kozosseg jo
 
-jelentkezes: átadópontok, + mapson, idokozok, telefonszam, folyamat, varolista, szezonkezdes, letszam, rendszer magyarazat
+jelentkezes: átadópontok, + mapson, idokozok, telefonszam, folyamat, varolista, szezonkezdes, letszam, rendszer magyarazat, kertlátogatás tagok szamara
 
 galeria: részlegre bontva
 
-rolunk: leiras, kepek, <a>
+rolunk: leiras, kepek, mappon, url ek, bio <a>
 
-kontakt: csak telefonon,telszam, idokozok
+kontakt: csak telefonon,telszam, idokozok, kertlátogatás tagok szamara
