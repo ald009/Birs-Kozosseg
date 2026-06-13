@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <link rel="shortcut icon" href="img/logoszel.png" type="image/x-icon">
@@ -39,27 +39,22 @@
     </ul>
     </header>
 
+
+
+    <div id="leaflet-js-map" style="height: 400px;"></div>
+
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
         <script>
-            const map = L.map('map').setView([51.505, -0.09], 13);
-
-            const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19,
-                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-            }).addTo(map);
-        </script>
-        <script>
              {
-            const map = L.map('leaflet-js-map').setView([46.231226, 6.051737], 14);
+            const map = L.map('leaflet-js-map').setView([47.497197, 19.051991], 11.5);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 minZoom: 0,
-                maxZoom: 20,
-                attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
+                maxZoom: 20
             }).addTo(map);
             const leafletMarkers = L.layerGroup([
-                new L.marker([46.233226, 6.055737]),
-                new L.marker([46.2278, 6.0510]),
-                new L.marker([46.23336, 6.0471])
+                new L.marker([47.469247, 19.113779]),
+                new L.marker([47.504182, 19.117937]),
+                new L.marker([47.536742, 19.073105])
             ]);
             leafletMarkers.addTo(map);
         }
