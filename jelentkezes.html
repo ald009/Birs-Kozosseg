@@ -38,5 +38,31 @@
         <li><a href="kapcsolat.html">Kapcsolat</a></li>
     </ul>
     </header>
+
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <script>
+            const map = L.map('map').setView([51.505, -0.09], 13);
+
+            const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+        </script>
+        <script>
+             {
+            const map = L.map('leaflet-js-map').setView([46.231226, 6.051737], 14);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                minZoom: 0,
+                maxZoom: 20,
+                attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
+            }).addTo(map);
+            const leafletMarkers = L.layerGroup([
+                new L.marker([46.233226, 6.055737]),
+                new L.marker([46.2278, 6.0510]),
+                new L.marker([46.23336, 6.0471])
+            ]);
+            leafletMarkers.addTo(map);
+        }
+        </script>
 </body>
 </html>

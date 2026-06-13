@@ -11,7 +11,9 @@ https://www.youtube.com/watch?v=_7YjQ7kDIO8
 
 home: kozossegi gazdalkodas (url-ek is),bio,  itt olcso, kozosseg jo
 
-jelentkezes: átadópontok, + mapson, idokozok, telefonszam, folyamat, varolista, szezonkezdes, letszam, rendszer magyarazat, kertlátogatás tagok szamara
+jelentkezes: átadópontok, + mapson, idokozok, telefonszam, folyamat, varolista, szezonkezdes, letszam, kertlátogatás tagok szamara
+
+mezogazdalkodas: rendszer, videok, szoveg(facebook lopas)
 
 galeria: részlegre bontva
 
