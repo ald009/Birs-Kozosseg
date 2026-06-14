@@ -17,9 +17,12 @@
 <body>
     <header>
         
+        <div>
         <a class="header-bal" href="index.html">
             Birs Közösség
         </a>
+        <p class="p-bal">Jelentkezés</p>
+        </div>
     <a href="index.html">
     <img src="img/logoszel.png" alt="logo">
     </a>
@@ -38,23 +41,41 @@
         <li><a href="kapcsolat.html">Kapcsolat</a></li>
     </ul>
     </header>
-
-
+    <div class="atadopontok">
+    <h1>Átadópontaink</h1>
+    <ul>
+        <li><a onclick="alert('nigger')">1. IX. ker. József Attila lakótelep Üllői út 159 (zöld emeletes ház mögötti parkoló).
+            Időpont: 14:45 - 15:00</a></li>
+        <li><a onclick="marker.openPopup()">2. XIV. ker. Pillangó utca, a Fogarasi úti Tesco oldalánál.
+            Időpont :15:30 - 15:45</a></li>
+        <li><a onclick="marker.openPopup()">3. XIII. ker. Teve utca 33-41. előtti parkoló.
+            Időpont: 16:15 - 16:30</a></li>
+        <li><a onclick="marker.openPopup()">4. VIII. ker. Rökk Szilárd utca 3. (volt Görbe-bögre kávézó).
+            Időpont: 17:15 - 17:45 között.</a></li>
+        <li><a onclick="marker.openPopup()">5. XI. ker. Bukaresti u. sarok (játszótérnél).
+            Időpont: 18:15 - 18:45 között.</a></li>
+        <li><a onclick="marker.openPopup()">6. IX. és XX. ker. Határ úti Lidl parkolója.
+            Időpont :19:20</a></li>
+    </ul>
+    </div>
 
     <div id="leaflet-js-map" style="height: 400px;"></div>
 
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
         <script>
              {
-            const map = L.map('leaflet-js-map').setView([47.497197, 19.051991], 11.5);
+            const map = L.map('leaflet-js-map').setView([47.495699, 19.069789], 11.5);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 minZoom: 0,
                 maxZoom: 20
             }).addTo(map);
             const leafletMarkers = L.layerGroup([
-                new L.marker([47.469247, 19.113779]),
-                new L.marker([47.504182, 19.117937]),
-                new L.marker([47.536742, 19.073105])
+                new L.marker([47.469247, 19.113779]).bindPopup("Location 1 - Your text here"),
+                new L.marker([47.504182, 19.117937]).bindPopup("Location 2 - Your text here"),
+                new L.marker([47.536742, 19.073105]).bindPopup("Location 3 - Your text here"),
+                new L.marker([47.492699, 19.069789]).bindPopup("Location 4 - Your text here"),
+                new L.marker([47.473396, 19.039389]).bindPopup("Location 5 - Your text here"),
+                new L.marker([47.445248, 19.097730]).bindPopup("Location 6 - Your text here")
             ]);
             leafletMarkers.addTo(map);
         }

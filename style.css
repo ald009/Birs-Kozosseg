@@ -80,6 +80,18 @@ header .header-bal:any-link:hover{
     color: var(--clay);
 }
 
+header .p-bal {
+    font-weight: bold;
+    z-index: 1;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    font-size: 15px;
+    color: var(--sage);
+    margin: 0px;
+}
+
 header .nav-toggle {
     display: none;
     border: none;
@@ -108,12 +120,24 @@ header .nav-toggle img {
     border: 0;
 }
 
-@media (max-width: 900px) {
+.atadopontok{
+    max-width: 800px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+@media (max-width: 1000px) {
     header {
         padding: 20px;
         flex-wrap: wrap;
         align-items: flex-start;
         gap: 20px;
+    }
+
+    header > div {
+        order: 1;
     }
 
     header .header-bal:any-link {
@@ -125,11 +149,20 @@ header .nav-toggle img {
         
     }
 
+    header .p-bal {
+        order: 1;
+        margin-top: 0px;
+        padding-left: 0;
+    }
+
+    header > a:has(img) {
+        order: 0;
+    }
+
     header img {
         position: static;
         transform: none;
         height: 50px;
-        margin: 0 auto;
         order: 3;
     }
 
@@ -162,6 +195,8 @@ header .nav-toggle img {
 }
 
 #leaflet-js-map {
+    margin-left: auto;
+    margin-right: auto;
     width: 400px;
     height: 400px;
     margin-top: 20px;
