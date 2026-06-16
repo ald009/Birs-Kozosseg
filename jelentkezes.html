@@ -41,25 +41,52 @@
         <li><a href="kapcsolat.html">Kapcsolat</a></li>
     </ul>
     </header>
+    <div class="jelentkezes">
+    <h1>Ha szeretnél csatlakozni, évközben is megteheted!</h1> <br>
+    <h2>Kizárólag telefonon a <span style="font-style: italic;color: var(--sage);">+36 20 215 9353</span> számon vagy email-ben a <span style="font-style: italic;color: var(--sage);">hejjasszilvia@gmail.com</span> címen.</h2>
+    <h2>További információkért csatlakozz a Facebook csoportunkhoz <a style="color: var(--meadow);" href="https://www.facebook.com/groups/141650276009754/" target="_blank">ezen a linken.</a></h2>
+    </div>
+
+
+
+
+
     <div class="atadopontok">
     <h1>Átadópontaink</h1>
     <ul>
-        <li><a onclick="alert('nigger')">1. IX. ker. József Attila lakótelep Üllői út 159 (zöld emeletes ház mögötti parkoló).
-            Időpont: 14:45 - 15:00</a></li>
-        <li><a onclick="marker.openPopup()">2. XIV. ker. Pillangó utca, a Fogarasi úti Tesco oldalánál.
-            Időpont :15:30 - 15:45</a></li>
-        <li><a onclick="marker.openPopup()">3. XIII. ker. Teve utca 33-41. előtti parkoló.
-            Időpont: 16:15 - 16:30</a></li>
-        <li><a onclick="marker.openPopup()">4. VIII. ker. Rökk Szilárd utca 3. (volt Görbe-bögre kávézó).
-            Időpont: 17:15 - 17:45 között.</a></li>
-        <li><a onclick="marker.openPopup()">5. XI. ker. Bukaresti u. sarok (játszótérnél).
-            Időpont: 18:15 - 18:45 között.</a></li>
-        <li><a onclick="marker.openPopup()">6. IX. és XX. ker. Határ úti Lidl parkolója.
-            Időpont :19:20</a></li>
+        <li><a href="#" data-marker-index="0">1. IX. ker. József Attila lakótelep Üllői út 159 (zöld emeletes ház mögötti parkoló).
+            <span style="font-style: italic; color: var(--straw);">Időpont: 14:45 - 15:00</span></a></li>
+        <li><a href="#" data-marker-index="1">2. XIV. ker. Pillangó utca, a Fogarasi úti Tesco oldalánál.
+            <span style="font-style: italic; color: var(--straw);">Időpont: 15:30 - 15:45</span></a></li>
+        <li><a href="#" data-marker-index="2">3. XIII. ker. Teve utca 33-41. előtti parkoló.
+            <span style="font-style: italic; color: var(--straw);">Időpont: 16:15 - 16:30</span></a></li>
+        <li><a href="#" data-marker-index="3">4. VIII. ker. Rökk Szilárd utca 3. (volt Görbe-bögre kávézó).
+            <span style="font-style: italic; color: var(--straw);">Időpont: 17:15 - 17:45 között.</span></a></li>
+        <li><a href="#" data-marker-index="4">5. XI. ker. Bukaresti u. sarok (játszótérnél).
+            <span style="font-style: italic; color: var(--straw);">Időpont: 18:15 - 18:45 között.</span></a></li>
+        <li><a href="#" data-marker-index="5">6. IX. és XX. ker. Határ úti Lidl parkolója.
+            <span style="font-style: italic; color: var(--straw);">Időpont: 19:20</span></a></li>
     </ul>
     </div>
 
     <div id="leaflet-js-map" style="height: 400px;"></div>
+
+    <div class="jelentkezes">
+    <h1>Várólista</h1>
+    <p>Jelenleg a magas érdeklődés miatt várólistát vezettünk be, ahova az újonnan csatlakozott tagok kerülnek. Így tudjuk a legtisztességesebben elosztani a tagok számát.</p>
+    <p>A szezon jövő áprilisban indul majd, de a várólistára már most fel tudsz iratkozni.</p>
+    <p>A 2026-os szezon 90 fővel indult, amit későbbiekben is próbálunk tartani.</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
 
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
         <script>
@@ -69,15 +96,31 @@
                 minZoom: 0,
                 maxZoom: 20
             }).addTo(map);
-            const leafletMarkers = L.layerGroup([
-                new L.marker([47.469247, 19.113779]).bindPopup("Location 1 - Your text here"),
-                new L.marker([47.504182, 19.117937]).bindPopup("Location 2 - Your text here"),
-                new L.marker([47.536742, 19.073105]).bindPopup("Location 3 - Your text here"),
-                new L.marker([47.492699, 19.069789]).bindPopup("Location 4 - Your text here"),
-                new L.marker([47.473396, 19.039389]).bindPopup("Location 5 - Your text here"),
-                new L.marker([47.445248, 19.097730]).bindPopup("Location 6 - Your text here")
-            ]);
-            leafletMarkers.addTo(map);
+
+            const markerData = [
+                { coords: [47.469247, 19.113779], popup: "IX. ker. Üllői út" },
+                { coords: [47.504182, 19.117937], popup: "XIV. ker. Pillangó utca, Tesco parkoló." },
+                { coords: [47.536742, 19.073105], popup: "XIII. ker. Teve utca 33-41. előtti parkoló." },
+                { coords: [47.492699, 19.069789], popup: "VIII. ker. Rökk Szilárd utca" },
+                { coords: [47.473396, 19.039389], popup: "XI. ker. Bukaresti u. sarok" },
+                { coords: [47.445248, 19.097730], popup: "IX. és XX. ker. Határ úti Lidl parkolója." }
+            ];
+
+            const markers = markerData.map(({ coords, popup }) => {
+                return L.marker(coords).bindPopup(popup).addTo(map);
+            });
+
+            document.querySelectorAll('.atadopontok ul li a[data-marker-index]').forEach(link => {
+                link.addEventListener('click', event => {
+                    event.preventDefault();
+                    const index = Number(link.dataset.markerIndex);
+                    const marker = markers[index];
+                    if (marker) {
+                        map.setView(marker.getLatLng(), map.getZoom());
+                        marker.openPopup();
+                    }
+                });
+            });
         }
         </script>
 </body>

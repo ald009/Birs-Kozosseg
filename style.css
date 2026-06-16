@@ -6,6 +6,7 @@
     --cream: #f7f0e6;
     --sage: #6b9472;
     --meadow: #3d6e4e;
+    --meadow2: #233d2c;
     --mist: #dde8e0;
     --dusk: #c4b49e;
     --white: #fdfaf6;
@@ -122,10 +123,43 @@ header .nav-toggle img {
 
 .atadopontok{
     max-width: 800px;
-    margin-top: 20px;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
+}
 
+.atadopontok h1{
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--straw);
+    margin-bottom: 20px;
+    text-align: center;
+}
+.atadopontok li{
+    margin-bottom: 14px;
+
+}
+.atadopontok li a:any-link{
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--bark);
+    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.jelentkezes{
+    color: var(--meadow2);
+    max-width: 60%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.jelentkezes h1{
+    font-size: 29px;
+    font-weight: bold;
+    color: var(--bark);
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 @media (max-width: 1000px) {
@@ -192,6 +226,15 @@ header .nav-toggle img {
         width: 100%;
         padding: 10px 12px;
     }
+
+    .atadopontok{
+        max-width: 90%;
+        margin-top: 30px;
+    }
+
+    .jelentkezes{
+    max-width: 90%;
+    }
 }
 
 #leaflet-js-map {
@@ -199,7 +242,8 @@ header .nav-toggle img {
     margin-right: auto;
     width: 400px;
     height: 400px;
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     border-radius: 30px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 }
