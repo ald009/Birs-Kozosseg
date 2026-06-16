@@ -22,10 +22,9 @@ body{
 
 header{
     position: relative;
-    background: rgba(247, 240, 230, 0.93);
+    background: #faf1e4;
     backdrop-filter: blur(10px);
     border: 1px solid var(--dusk);
-    color: white;
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
@@ -151,7 +150,7 @@ header .nav-toggle img {
     color: var(--meadow2);
     
     max-width: 60%;
-    margin-top: 50px;
+    margin-top: 70px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -184,7 +183,7 @@ header .nav-toggle img {
 
 .gallery-header h1 {
     font-size: 36px;
-    color: var(--straw);
+    color: var(--meadow);
     margin-bottom: 12px;
 }
 
@@ -202,8 +201,9 @@ header .nav-toggle img {
 }
 
 .gallery-item {
+    font-style: italic;
     background: var(--cream);
-    border: 1px solid rgba(62, 36, 16, 0.15);
+    border: 2px solid var(--dusk);
     border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
@@ -211,7 +211,7 @@ header .nav-toggle img {
     padding: 0;
     display: flex;
     flex-direction: column;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .gallery-item:hover {
@@ -229,8 +229,8 @@ header .nav-toggle img {
 .gallery-item-caption {
     padding: 14px 16px;
     font-size: 16px;
-    color: var(--meadow2);
-    background: #fff;
+    color: var(--bark);
+    background: var(--white);
 }
 
 .gallery-modal {
@@ -272,12 +272,12 @@ header .nav-toggle img {
 
 .gallery-modal-close {
     position: absolute;
-    top: -10px;
-    right: -10px;
+    top: -50px;
+    right: -50px;
     background: rgba(255, 255, 255, 0.14);
     color: var(--cream);
     border: none;
-    font-size: 30px;
+    font-size: 23px;
     width: 48px;
     height: 48px;
     border-radius: 50%;
@@ -314,6 +314,63 @@ header .nav-toggle img {
     background: rgba(255,255,255,0.22);
 }
 
+#leaflet-js-map {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 400px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+.site-footer {
+    margin-top: 60px;
+    background-color: var(--soil);
+    color: var(--cream);
+    padding: 20px 18px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.site-footer .footer-content {
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-footer p:hover {
+    color: var(--dusk);
+}
+
+.kertlat {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.kertlat .jelentkezes {
+    flex: 1 1 320px;
+    min-width: 280px;
+}
+
+.kertlat img {
+    flex: 1 1 320px;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 15px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 @media (max-width: 860px) {
     .gallery-item img {
         height: 160px;
@@ -338,6 +395,9 @@ header .nav-toggle img {
     .gallery-modal-controls {
         flex-direction: column;
         align-items: stretch;
+        margin-left: auto;
+        margin-right: auto;
+        width: 25%;
     }
 }
 
@@ -419,6 +479,11 @@ header .nav-toggle img {
         padding: 18px 14px;
     }
 
+    .site-footer .footer-content {
+        flex-direction: column;
+        gap: 12px;
+    }
+
     .kertlat {
         flex-direction: column;
         align-items: stretch;
@@ -430,62 +495,6 @@ header .nav-toggle img {
     }
 }
 
-#leaflet-js-map {
-    margin-left: auto;
-    margin-right: auto;
-    width: 400px;
-    height: 400px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border-radius: 30px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-}
-
-.site-footer {
-    margin-top: 60px;
-    background-color: var(--soil);
-    color: var(--cream);
-    padding: 20px 18px;
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.site-footer .footer-content {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    align-items: center;
-    justify-content: center;
-}
-
-.site-footer a:hover {
-    text-decoration: underline;
-}
-
-.kertlat {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 30px 20px;
-}
-
-.kertlat .jelentkezes {
-    flex: 1 1 320px;
-    min-width: 280px;
-}
-
-.kertlat img {
-    flex: 1 1 320px;
-    max-width: 600px;
-    width: 100%;
-    border-radius: 15px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
 
 
 

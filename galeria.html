@@ -17,9 +17,12 @@
 <body>
     <header>
         
+        <div>
         <a class="header-bal" href="index.html">
             Birs Közösség
         </a>
+        <p class="p-bal">Galéria</p>
+        </div>
     <a href="index.html">
     <img src="img/logoszel.png" alt="logo">
     </a>
@@ -50,7 +53,7 @@
         <div class="gallery-modal" id="galleryModal" aria-hidden="true">
             <div class="gallery-modal-backdrop" data-close="true"></div>
             <div class="gallery-modal-content" role="dialog" aria-modal="true" aria-labelledby="galleryModalTitle">
-                <button class="gallery-modal-close" type="button" aria-label="Bezárás">×</button>
+                <button class="gallery-modal-close" type="button" aria-label="Bezárás">X</button>
                 <img id="galleryModalImage" src="" alt="" />
                 <div class="gallery-modal-controls">
                     <button type="button" class="gallery-prev">Előző</button>
@@ -64,7 +67,7 @@
     <footer class="site-footer">
         <div class="footer-content">
             <p>Birs Közösség &copy; 2026</p>
-            <p>Kapcsolat: <span style="font-style: italic; color: var(--straw);">hejjasszilvia@gmail.com</span> vagy <span style="font-style: italic; color: var(--straw);"> +36-20-215-9353</span></p>
+            <p>Kapcsolat: <span style="font-style: italic; color: var(--straw);">hejjasszilvia@gmail.com</span><br> vagy <span style="font-style: italic; color: var(--straw);"> +36-20-215-9353</span></p>
             <p>6115. Kunszállás, Magyarország</p>
         </div>
     </footer>
@@ -72,18 +75,53 @@
     <script>
         (function () {
             const galleryImages = [
-                { src: 'img/1.jpg', caption: 'Közösségi kert 1' },
-                { src: 'img/2.jpg', caption: 'Közösségi kert 2' },
+                { src: 'img/1.jpg', caption: 'Spenót??' },
+                { src: 'img/2.jpg', caption: 'Karalábé' },
                 { src: 'img/3.jpg', caption: 'Közösségi kert 3' },
-                { src: 'img/4.jpg', caption: 'Közösségi kert 4' },
-                { src: 'img/5.jpg', caption: 'Közösségi kert 5' },
+                { src: 'img/4.jpg', caption: 'Paradicsom' },
+                { src: 'img/5.jpg', caption: 'Paprika' },
                 { src: 'img/7.jpg', caption: 'Közösségi kert 7' },
                 { src: 'img/8.jpg', caption: 'Közösségi kert 8' },
                 { src: 'img/9.jpg', caption: 'Közösségi kert 9' },
                 { src: 'img/10.jpg', caption: 'Közösségi kert 10' },
                 { src: 'img/11.jpg', caption: 'Közösségi kert 11' },
                 { src: 'img/12.jpg', caption: 'Közösségi kert 12' },
-                { src: 'img/kertlat1.jpg', caption: 'Kertlátogatás' }
+                { src: 'img/13.jpg', caption: 'Közösségi kert 1' },
+                { src: 'img/14.jpg', caption: 'Közösségi kert 2' },
+                { src: 'img/15.jpg', caption: 'Közösségi kert 3' },
+                { src: 'img/16.jpg', caption: 'Közösségi kert 4' },
+                { src: 'img/17.jpg', caption: 'Közösségi kert 5' },
+                { src: 'img/18.jpg', caption: 'Közösségi kert 7' },
+                { src: 'img/19.jpg', caption: 'Közösségi kert 8' },
+                { src: 'img/20.jpg', caption: 'Közösségi kert 9' },
+                { src: 'img/21.jpg', caption: 'Közösségi kert 10' },
+                { src: 'img/22.jpg', caption: 'Közösségi kert 11' },
+                { src: 'img/23.jpg', caption: 'Közösségi kert 12' },
+                { src: 'img/24.jpg', caption: 'Közösségi kert 8' },
+                { src: 'img/25.jpg', caption: 'Közösségi kert 9' },
+                { src: 'img/26.jpg', caption: 'Sári' },
+                { src: 'img/27.jpg', caption: 'Libák palántálnak' },
+                { src: 'img/28.jpg', caption: 'Mézalmácska' },
+                { src: 'img/29.jpg', caption: 'Közösségi kert 11' },
+                { src: 'img/30.jpg', caption: 'Közösségi kert 12' },
+                { src: 'img/31.jpg', caption: 'Takaró' },
+                { src: 'img/32.jpg', caption: 'Libucik' },
+                { src: 'img/k1.jpg', caption: 'Kertlátogatás 2025' },
+                { src: 'img/k2.jpg', caption: 'Kertlátogatás 2025' },
+                { src: 'img/k3.jpg', caption: 'Kertlátogatás 2025' },
+                { src: 'img/kt1.jpg', caption: 'Kertlátogatás 2026' },
+                { src: 'img/kt2.jpg', caption: 'Kertlátogatás 2026' },
+                { src: 'img/kt3.jpg', caption: 'Kertlátogatás 2026' },
+                { src: 'img/kt4.jpg', caption: 'Kertlátogatás 2026' },
+                { src: 'img/kt5.jpg', caption: 'Kertlátogatás 2026' },
+                { src: 'img/kt6.jpg', caption: 'Kertlátogatás 2026' },
+                { src: 'img/kt7.jpg', caption: 'Kertlátogatás 2026' },
+                { src: 'img/kt8.jpg', caption: 'Kertlátogatás 2026' },
+                { src: 'img/kt9.jpg', caption: 'Kertlátogatás 2026' },
+                { src: 'img/kt10.jpg', caption: 'Kertlátogatás 2026' },
+                { src: 'img/kt11.jpg', caption: 'Kertlátogatás 2026' },
+                { src: 'img/kt12.jpg', caption: 'Kertlátogatás 2026' },
+                { src: 'img/kt13.jpg', caption: 'Kertlátogatás 2026' },
             ];
 
             const galleryGrid = document.querySelector('.gallery-grid');
