@@ -38,5 +38,123 @@
         <li><a href="kapcsolat.html">Kapcsolat</a></li>
     </ul>
     </header>
+
+    <main class="gallery-section">
+        <div class="gallery-header">
+            <h1>Galéria</h1>
+            <p>Tekintsd meg képeinket nagyított nézetben, és navigálj közöttük a megnyíló galéria használatával.</p>
+        </div>
+
+        <div class="gallery-grid"></div>
+
+        <div class="gallery-modal" id="galleryModal" aria-hidden="true">
+            <div class="gallery-modal-backdrop" data-close="true"></div>
+            <div class="gallery-modal-content" role="dialog" aria-modal="true" aria-labelledby="galleryModalTitle">
+                <button class="gallery-modal-close" type="button" aria-label="Bezárás">×</button>
+                <img id="galleryModalImage" src="" alt="" />
+                <div class="gallery-modal-controls">
+                    <button type="button" class="gallery-prev">Előző</button>
+                    <div class="gallery-modal-caption" id="galleryModalCaption"></div>
+                    <button type="button" class="gallery-next">Következő</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>Birs Közösség &copy; 2026</p>
+            <p>Kapcsolat: <span style="font-style: italic; color: var(--straw);">hejjasszilvia@gmail.com</span> vagy <span style="font-style: italic; color: var(--straw);"> +36-20-215-9353</span></p>
+            <p>6115. Kunszállás, Magyarország</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const galleryImages = [
+                { src: 'img/1.jpg', caption: 'Közösségi kert 1' },
+                { src: 'img/2.jpg', caption: 'Közösségi kert 2' },
+                { src: 'img/3.jpg', caption: 'Közösségi kert 3' },
+                { src: 'img/4.jpg', caption: 'Közösségi kert 4' },
+                { src: 'img/5.jpg', caption: 'Közösségi kert 5' },
+                { src: 'img/7.jpg', caption: 'Közösségi kert 7' },
+                { src: 'img/8.jpg', caption: 'Közösségi kert 8' },
+                { src: 'img/9.jpg', caption: 'Közösségi kert 9' },
+                { src: 'img/10.jpg', caption: 'Közösségi kert 10' },
+                { src: 'img/11.jpg', caption: 'Közösségi kert 11' },
+                { src: 'img/12.jpg', caption: 'Közösségi kert 12' },
+                { src: 'img/kertlat1.jpg', caption: 'Kertlátogatás' }
+            ];
+
+            const galleryGrid = document.querySelector('.gallery-grid');
+            const modal = document.getElementById('galleryModal');
+            const modalImage = document.getElementById('galleryModalImage');
+            const modalCaption = document.getElementById('galleryModalCaption');
+            const btnPrev = modal.querySelector('.gallery-prev');
+            const btnNext = modal.querySelector('.gallery-next');
+            const btnClose = modal.querySelector('.gallery-modal-close');
+            const backdrop = modal.querySelector('.gallery-modal-backdrop');
+            let activeIndex = 0;
+
+            function renderGallery() {
+                galleryImages.forEach((item, index) => {
+                    const button = document.createElement('button');
+                    button.type = 'button';
+                    button.className = 'gallery-item';
+                    button.dataset.index = index;
+                    button.innerHTML = `
+                        <img src="${item.src}" alt="${item.caption}" loading="lazy" />
+                        <div class="gallery-item-caption">${item.caption}</div>
+                    `;
+                    button.addEventListener('click', () => openModal(index));
+                    galleryGrid.appendChild(button);
+                });
+            }
+
+            function openModal(index) {
+                activeIndex = index;
+                updateModal();
+                modal.classList.add('open');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                modal.classList.remove('open');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+
+            function updateModal() {
+                const item = galleryImages[activeIndex];
+                modalImage.src = item.src;
+                modalImage.alt = item.caption;
+                modalCaption.textContent = item.caption;
+            }
+
+            function showNext() {
+                activeIndex = (activeIndex + 1) % galleryImages.length;
+                updateModal();
+            }
+
+            function showPrev() {
+                activeIndex = (activeIndex - 1 + galleryImages.length) % galleryImages.length;
+                updateModal();
+            }
+
+            btnNext.addEventListener('click', showNext);
+            btnPrev.addEventListener('click', showPrev);
+            btnClose.addEventListener('click', closeModal);
+            backdrop.addEventListener('click', closeModal);
+            window.addEventListener('keydown', (event) => {
+                if (!modal.classList.contains('open')) return;
+                if (event.key === 'Escape') closeModal();
+                if (event.key === 'ArrowRight') showNext();
+                if (event.key === 'ArrowLeft') showPrev();
+            });
+
+            renderGallery();
+        })();
+    </script>
 </body>
 </html>
