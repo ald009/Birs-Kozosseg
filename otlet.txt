@@ -7,6 +7,7 @@ https://tudatosvasarlo.hu/klimavaltozas-aszaly-vadkar-kozossegi-gazdasag/
 https://tudatosvasarlo.hu/birs-kozosseg/
 https://nepszava.hu/3188909_kozossegi-gazdalkodas-magyarorszag-elelmiszer-termeles-birs-kozosseg
 https://tudatosvasarlo.hu/olyan-mintha-lenne-egy-sajat-kertem-csak-nem-nekem-kell-kapalni/?fbclid=IwY2xjawSYt2RleHRuA2FlbQIxMABicmlkETFVOEJHa2tIemg1Y0dIaGxTc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHiNqjBaW6PppQfS4XPS8uKcQJh8lK7xiEr-RmmuRo0vtgw_fMQdJF7Xfzjad_aem_i2lK4SXGwH7oVSpvZrkFCA
+
 https://www.youtube.com/watch?v=_7YjQ7kDIO8
 https://tudatosvasarlo.hu/hogyan-vasarolhatsz-kozvetlenul-a-gazdatol-kozossegi-gazdasagok/
 
@@ -16,7 +17,7 @@ home: kozossegi gazdalkodas (url-ek is),bio,  itt olcso, kozosseg jo
 
 mezogazdalkodas: rendszer, videok, szoveg(facebook lopas)
 
-galeria: részlegre bontva
+------galeria: részlegre bontva
 
 rolunk: leiras, kepek, mappon, url ek, bio <a>
 
