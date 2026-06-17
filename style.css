@@ -12,6 +12,27 @@
     --white: #fdfaf6;
 }
 
+/* Fade-in and slide-up animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ease-in {
+    animation: fadeInUp 0.4s ease-in-out forwards;
+}
+
+/* Stagger delays for initial load */
+.ease-in {
+    animation-delay: var(--animation-delay, 0s);
+}
+
 body{
     background-color: var(--cream);
     margin: 0px;
@@ -174,7 +195,7 @@ header .nav-toggle img {
     font-size: 28px;
     font-weight: bold;
     color: var(--bark);
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
