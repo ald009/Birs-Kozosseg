@@ -255,6 +255,11 @@ header .nav-toggle img {
     text-align: justify;
 }
 
+.rolunk a:any-link{
+    color: var(--meadow2);
+    text-decoration: none;
+}
+
 .gallery-section {
     max-width: 1200px;
     margin: 0 auto;
@@ -677,6 +682,25 @@ header .nav-toggle img {
     height: auto;
     object-fit: cover;
     display: block;
+}
+
+.home {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.home h1 {
+    font-size: 36px;
+    color: var(--meadow);
+    margin-bottom: 20px;
+}
+
+.home p {
+    font-size: 20px;
+    color: var(--bark);
+
 }
 
 
