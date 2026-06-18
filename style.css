@@ -634,6 +634,19 @@ header .nav-toggle img {
     border-radius: 15px;
 }
 
+.mezo img{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
 .rolunkimg {
     display: flex;
     flex-wrap: wrap;
