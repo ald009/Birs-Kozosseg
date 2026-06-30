@@ -28,7 +28,7 @@
 }
 
 .ease-in {
-    animation-delay:calc(var(--animation-delay, 0s) / 4);
+    animation-delay:calc(var(--animation-delay, 0s) / 5);
 }
 
 ::-webkit-scrollbar {
